@@ -1,7 +1,7 @@
 import logging.config
-
+import sys
 from flask import Flask, Blueprint
-from flask.ext.bcrypt import Bcrypt
+#from flask.ext.bcrypt import Bcrypt
 from rest_api import settings
 from rest_api.api.blog.endpoints.posts import ns as blog_posts_namespace
 from rest_api.api.blog.endpoints.categories import ns as blog_categories_namespace
@@ -11,7 +11,7 @@ from rest_api.database import db
 
 
 app = Flask(__name__)
-bcrypt = Bcrypt(app)
+#bcrypt = Bcrypt(app)
 logging.config.fileConfig('logging.conf')
 log = logging.getLogger(__name__)
 
